@@ -38,6 +38,10 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
+
 header {
   background-color: var(--brand-blue-zodiac);
   position: sticky;
@@ -283,6 +287,7 @@ main {
 }
 
 .details-mission {
+  list-style-type: none;
   font-size: 0.9rem;
   line-height: 1.8;
 
@@ -316,6 +321,12 @@ main {
     }
   }
 
+  .fa-github,
+  .fa-solid {
+    color: white;
+    font-size: 32px;
+  }
+
 .link-to-projects {
   display: flex;
   justify-content: center;
@@ -343,6 +354,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 1rem;
+  list-style-type: none;
 }
 
 .stack {
@@ -488,6 +500,7 @@ footer {
     .framer {
       width: 48%;
       margin-right: 0.5rem;
+      min-height: 100%;
     }
 
     .container-stack {
@@ -503,6 +516,7 @@ footer {
       flex-direction: row;
       flex-wrap: wrap;
       margin-top: 50px;
+      align-items: stretch;
     }
 
     .skills-container {
@@ -522,7 +536,6 @@ footer {
     .card-soft-skill {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
 
     .soft-skill {
