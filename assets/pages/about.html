@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-NRL9QP/eayPDyhQ+Oa83UxH3eWtVeHA7i+J+MHl5hsOjB5zsJz3sOsJn+dLplZbWCx62S3IO9EhXZk0anHfLGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../style/style.css">
-  <link rel="stylesheet" href="../style/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/assets/style/style.css">
+  <link rel="stylesheet" href="/assets/style/reset.css">
   <title>À propos - Khadija Bayssir</title>
 </head>
 <body>
@@ -25,18 +25,12 @@
         <li class="navigation__element">
           <a class="navigation__link" href="./project.html">Projets</a>
         </li>
-        <li class="navigation__element">
-          <a class="navigation__link" href="./skills.html">Compétences</a>
-        </li>
-        <li class="navigation__element">
-          <a class="navigation__link" href="./contact.html">Contact</a>
-        </li>
       </ul>
       <div>
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars svg-menu"></i>
       </div>
       <div>
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times svg-menu"></i>
       </div>
     </nav>
     <div class="navigation__mobile" onclick="openMenuMobile()">
@@ -49,22 +43,31 @@
     <div>
       <ul class="media_list">
         <li class="media_element">
-          <i class="fa-brands fa-square-twitter icons-media">
-            <a class="media_link" href=""></a>
-          </i>
-          </i>
+          <a class="media_link" href="https://twitter.com/b1_khadija" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-square-twitter icons-media"></i>
+          </a>
         </li>
         <li class="media_element">
-          <i class="fa-brands fa-linkedin icons-media">
-            <a class="media_link" href=""></a>
-          </i>
+          <a class="media_link" href="https://www.linkedin.com/in/khadija-bayssir/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin icons-media"></i>
+          </a>
         </li>
         <li class="media_element">
-          <i class="fa-brands fa-square-github icons-media">
-            <a class="media_link" href=""></a>
-          </i>
+          <a class="media_link" href="https://github.com/b-khadija" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-square-github icons-media"></i>
+          </a>
         </li>
       </ul>
+    </div>
+    <div class="content">
+      <section class="container-about">
+        <h1 class="section-title">À propos</h1>
+        <p class="about-paragraph">
+          Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation Ada Tech School, c’est une école Inclusive avec une approche pédagogique alternative qui a pour mission de construire une nouvelle culture tech plus ouverte, féminine et créative.
+          Après avoir suivi ma première formation au sein d'Oclock et Tanaguru, d'une durée de 4 mois, j'ai eu l'opportunité de mettre en pratique mes connaissances lors d'un stage de 6 mois au sein d'une entreprise. Cette expérience m'a permis de consolider mes acquis et d'observer le déroulement des projets dans le monde professionnel. Elle a non seulement confirmé ma décision de me reconvertir dans le développement web, mais a également renforcé ma passion pour ce domaine en constante évolution.
+          A la recherche d'un contrat en alternance pour mi-octobre 2023, avec un rythme de 4 jours en entreprise et 1 jour à l'école.
+        </p>
+      </section>
     </div>
   </main>
   <script src="../../script.js"></script>

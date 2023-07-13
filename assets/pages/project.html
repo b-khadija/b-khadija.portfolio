@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-NRL9QP/eayPDyhQ+Oa83UxH3eWtVeHA7i+J+MHl5hsOjB5zsJz3sOsJn+dLplZbWCx62S3IO9EhXZk0anHfLGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <link rel="stylesheet" href="../style/style.css">
   <link rel="stylesheet" href="../style/reset.css">
   <title>Projets - Khadija Bayssir</title>
 </head>
@@ -25,18 +24,12 @@
         <li class="navigation__element">
           <a class="navigation__link" href="project.html">Projets</a>
         </li>
-        <li class="navigation__element">
-          <a class="navigation__link" href="./skills.html">Compétences</a>
-        </li>
-        <li class="navigation__element">
-          <a class="navigation__link" href="./contact.html">Contact</a>
-        </li>
       </ul>
       <div>
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars svg-menu"></i>
       </div>
       <div>
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times svg-menu"></i>
       </div>
     </nav>
     <div class="navigation__mobile" onclick="openMenuMobile()">
@@ -49,23 +42,65 @@
     <div>
       <ul class="media_list">
         <li class="media_element">
-          <i class="fa-brands fa-square-twitter icons-media">
-            <a class="media_link" href=""></a>
-          </i>
-          </i>
+          <a class="media_link" href="https://twitter.com/b1_khadija" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-square-twitter icons-media"></i>
+          </a>
         </li>
         <li class="media_element">
-          <i class="fa-brands fa-linkedin icons-media">
-            <a class="media_link" href=""></a>
-          </i>
+          <a class="media_link" href="https://www.linkedin.com/in/khadija-bayssir/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin icons-media"></i>
+          </a>
         </li>
         <li class="media_element">
-          <i class="fa-brands fa-square-github icons-media">
-            <a class="media_link" href=""></a>
-          </i>
+          <a class="media_link" href="https://github.com/b-khadija" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-square-github icons-media"></i>
+          </a>
         </li>
       </ul>
     </div>
+    <section class="content container-project">
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-title">StreamBerry - Clone</h1>
+          <a href="https://github.com/b-khadija/NetflixApp/tree/star-project-app-netflix" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github icons-card icons-card-git"></i>            
+          </a>
+        </div>
+        <img src="/assets/images/streamberry.png" alt="">
+        <div class="card-footer">
+          <i class="fa-brands fa-react icons-card"></i>
+          <i class="fa-brands fa-html5 icons-card"></i>
+          <i class="fa-brands fa-sass icons-card"></i>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-title">World Tour</h1>
+          <a href="https://github.com/b-khadija/WorldTour" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github icons-card icons-card-git"></i>            
+          </a>
+        </div>
+        <img src="/assets/images/travel-home.png" alt="">
+        <div class="card-footer">
+          <i class="fa-brands fa-html5 icons-card"></i>
+          <i class="fa-brands fa-sass icons-card"></i>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h1 class="card-title">Coming soon</h1>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github icons-card icons-card-git"></i>            
+          </a>
+        </div>
+        <img class="coming-project-image" src="/assets/images/loading.png" alt="">
+        <div class="card-footer">
+          <i class="fa-brands fa-react icons-card"></i>
+          <i class="fa-brands fa-html5 icons-card"></i>
+          <i class="fa-brands fa-sass icons-card"></i>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="../../script.js"></script>
 </body>
