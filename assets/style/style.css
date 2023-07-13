@@ -435,6 +435,7 @@ main {
   .media_list {
     position: fixed;
     margin: 0;
+    left: .5rem;
   }
 
   .text-about {
