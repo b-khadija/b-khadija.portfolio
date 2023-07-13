@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-NRL9QP/eayPDyhQ+Oa83UxH3eWtVeHA7i+J+MHl5hsOjB5zsJz3sOsJn+dLplZbWCx62S3IO9EhXZk0anHfLGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="assets/style/reset.css">
   <title>Khadija Bayssir</title>
 </head>
 <body>
   <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
   <header role="banner" class="header-container">
-    <div class="logo-container">
-      <a href="index.html">
-        <img src="./assets/images/logo.png" alt="" class="logo">
-      </a>
+    <div class="logo">
+      <a href="index.html"></a>
     </div>
     <nav role="navigation" class="navigation">
       <div class="navigation__mobile_close" onclick="closeMenuMobile()">
@@ -23,23 +22,23 @@
       </div>
       <ul class="navigation__items">
         <li class="navigation__element">
-          <a class="navigation__link" href="#about">À propos</a>
+          <a class="navigation__link" href="./assets/pages/about.html">À propos</a>
         </li>
         <li class="navigation__element">
-          <a class="navigation__link" href="#projects">Projets</a>
+          <a class="navigation__link" href="./assets/pages/project.html">Projets</a>
         </li>
         <li class="navigation__element">
-          <a class="navigation__link" href="#skills">Compétences</a>
+          <a class="navigation__link" href="./assets/pages/skills.html">Compétences</a>
         </li>
         <li class="navigation__element">
-          <a class="navigation__link" href="#contact">Contact</a>
+          <a class="navigation__link" href="./assets/pages/contact.html">Contact</a>
         </li>
       </ul>
       <div>
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars svg-menu"></i>
       </div>
       <div>
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times svg-menu"></i>
       </div>
     </nav>
     <div class="navigation__mobile" onclick="openMenuMobile()">
@@ -52,98 +51,38 @@
     <div>
       <ul class="media_list">
         <li class="media_element">
-          <a class="media_link" href="">Twitter</a>
+          <i class="fa-brands fa-square-twitter icons-media">
+            <a class="media_link" href=""></a>
+          </i>
+          </i>
         </li>
         <li class="media_element">
-          <a class="media_link" href="">Linkedin</a>
+          <i class="fa-brands fa-linkedin icons-media">
+            <a class="media_link" href=""></a>
+          </i>
         </li>
         <li class="media_element">
-          <a class="media_link" href="">Github</a>
+          <i class="fa-brands fa-square-github icons-media">
+            <a class="media_link" href=""></a>
+          </i>
         </li>
       </ul>
     </div>
-    <div id="home">
-      <section class="container container-name">
-        <h1 class="name">Khadija Bayssir</h1>
-        <h2 class="title-job">Développeuse web FullStack</h2> 
-        <p class="accessibilty">Accessibilité numérique</p> 
+    <div class="content">
+      <section class="presentation">
+        <h1 class="name">
+          Khadija Bayssir
+        </h1>
+        <h2 class="title-job">
+          Développeuse web FullStack
+        </h2> 
+        <p class="accessibilty">Accessibilité numérique</p>
       </section>
-    </div>
-    <div id="about">
-      <section class="container">
-        <h2>À propos</h2>
-        <p class="text-about">
-          Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation Ada Tech School, c’est une école Inclusive avec une approche pédagogique alternative qui a pour mission de construire une nouvelle culture tech plus ouverte, féminine et créative.
-          Après avoir suivi ma première formation au sein d'Oclock et Tanaguru, d'une durée de 4 mois, j'ai eu l'opportunité de mettre en pratique mes connaissances lors d'un stage de 6 mois au sein d'une entreprise. Cette expérience m'a permis de consolider mes acquis et d'observer le déroulement des projets dans le monde professionnel. Elle a non seulement confirmé ma décision de me reconvertir dans le développement web, mais a également renforcé ma passion pour ce domaine en constante évolution.
-        </p>
-      </section>
-    </div>
-    <div id="projects">
-      <section class="container">
-        <h2>Projets</h2>
-        <div class=" container-cards">
-          <div class="card">
-            <img class="image-project" src="./assets/images/travel.png" alt="">
-            <div class="icons">
-              <div class="icons-elements">
-                <a href="#" class="icons-link">
-                  <svg class="svg-project" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-                  </svg>
-                </a>
-                <h4 class="title-project">StreamBerry - Clone</h4>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img class="image-project" src="./assets/images/travel.png" alt="">
-            <div class="icons">
-              <div class="icons-elements">
-                <a href="#" class="icons-link">
-                  <svg class="svg-project" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-                  </svg>
-                </a>
-                <h4 class="title-project">World Tour</h4>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img class="image-project" src="./assets/images/travel.png" alt="">
-            <div class="icons">
-              <div class="icons-elements">
-                <a href="#" class="icons-link">
-                  <svg class="svg-project" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
-                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-                  </svg>
-                </a>
-                <h4 class="title-project">World Tour</h4>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </section>
-    </div>
-    <div id="skills">
-      <section class="container">
-        <h2>Compétences</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem vitae, ut velit cum voluptates sint possimus cumque aliquam cupiditate excepturi est quae ad impedit quasi? Minus iure est qui eaque.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iure beatae fugiat perspiciatis, praesentium veniam tempore est nam minima culpa officia hic esse, illum temporibus quo voluptatibus nisi at dolor?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam eos reiciendis voluptate illum at dolore, dolorem illo excepturi? Reiciendis possimus repudiandae amet officia, vitae consequatur. Voluptas aliquam ducimus esse vero.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nisi culpa qui harum excepturi expedita cumque illum explicabo eos provident eligendi saepe, quo numquam molestias sed soluta, odit alias laudantium?
-        </p>
-      </section>
-    </div>
-    <div id="contact">
-      <section class="container">
-        <h2>Contact</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem vitae, ut velit cum voluptates sint possimus cumque aliquam cupiditate excepturi est quae ad impedit quasi? Minus iure est qui eaque.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iure beatae fugiat perspiciatis, praesentium veniam tempore est nam minima culpa officia hic esse, illum temporibus quo voluptatibus nisi at dolor?
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam eos reiciendis voluptate illum at dolore, dolorem illo excepturi? Reiciendis possimus repudiandae amet officia, vitae consequatur. Voluptas aliquam ducimus esse vero.
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nisi culpa qui harum excepturi expedita cumque illum explicabo eos provident eligendi saepe, quo numquam molestias sed soluta, odit alias laudantium?
-        </p>
-      </section>
+      <button class="home-button-about" role="button">
+        <a class="home-button-about-link" href="assets/pages/about.html">
+          À propos
+        </a>
+      </button>
     </div>
   </main>
   <script src="script.js"></script>
