@@ -368,6 +368,10 @@ main {
     display: block;
   }
 
+  .homepage {
+    padding-bottom: 5rem;
+  }
+
   .navigation {
     position: fixed;
     top: 0;
