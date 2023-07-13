@@ -12,8 +12,6 @@
 
 html {
   font-size: 62.5%;
-  overflow: hidden;
-  height: 100%;
 }
 
 body {
@@ -23,12 +21,12 @@ body {
   color: var(--brand-moon-raker);
   margin: 0 auto;
   padding: 0;
-  overflow-x: scroll;
+  /* overflow-x: scroll;
   overflow-y: hidden;
   hyphens: manual;
   -moz-hyphens: manual;
   -webkit-hyphens: manual;
-  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch; */
 }
 
 .header-container {
@@ -46,7 +44,15 @@ body {
 }
 
 .logo {
-  max-height: 100px;
+  width: 100%;
+  height: 100vh;
+  max-width: 10rem;
+  max-height: auto;
+  background-image: url(/assets/images/logo.png);
+  background-color: var(--brand-grey-zodiac);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .navigation__items {
@@ -97,96 +103,46 @@ body {
 
 .navigation__mobile svg {
   stroke: var(--brand-moon-raker);
-  width: 5rem;
-  height: 5rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
 
+.svg-menu {
+  display: none;
+}
+
 main {
-  padding: 5rem 10rem;
   display: flex;
   align-items: center;
+  margin-top: 17rem;
 }
 
 .media_list {
   position: absolute;
   bottom: 150px;
-  left: -140px;
-  transform: rotate(-90deg);
   z-index: 12;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
 }
 
-.media_element {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  display: inline-block;
-  padding: 0 30px;
-  text-transform: uppercase;
+.icons-media {
+  font-size: 1.6rem;
+  height: auto;
 }
 
-.media_link {
-  text-decoration: none;
-  color: var(--brand-moon-raker);
-}
-
-.media_link:hover {
+.icons-media:hover {
+  cursor: pointer;
   color: var(--brand-puerto-rico);
 }
 
-h1 {
-  font-size: 4.5rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h1, h2 {
-  color: var(--brand-moon-raker);
-}
-
-.container {
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(210, 189, 189);
-  margin-right: 10rem;
-  padding: 14rem;
-}
-
-.container-name {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 0;
+.media_element {
+  margin-top: 2rem;
 }
 
 .accessibilty {
   font-size: 2rem;
-}
-
-.container-cards {
-  width: 100vh;
-  height: 80%;
-  max-width: 800px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.card {
-  width: 100%;
-  height: 36rem;
-  max-width: 30rem;
-  border-radius: 1rem;
-  overflow: hidden;
-  background: rgba(119, 6, 6, 0);
-  box-shadow: 0 1.5rem 3.5rem rgba(0,0,0,.2);
-  backdrop-filter: blur(4rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
 }
 
 .image-project {
@@ -227,11 +183,6 @@ h1, h2 {
   fill: var(--brand-puerto-rico);
 }
 
-.svg-project {
-  width: 2.6rem;
-  height: 2.6rem;
-}
-
 .icons-link {
   padding-top: 18rem;
 }
@@ -241,43 +192,91 @@ h1, h2 {
   text-align: center;
 }
 
+.content {
+  margin: 0 auto;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  line-height: 2.8rem;
+  justify-content: flex-start;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-job {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.accessibilty {
+  font-size: 1.8rem;
+}
+
+.home-button-about {
+  margin-top: 1rem;
+  padding: 1rem 2.4rem;
+  outline: 0;
+  border: .1rem solid black;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.home-button-about::after {
+  content: '';
+  background-color: var(--brand-puerto-rico);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: .7rem;
+  left: .7rem;
+  transition: 0.2s;
+}
+
+.home-button-about:hover::after {
+  top: 0;
+  left: 0;
+}
+
+.home-button-about-link {
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: .3rem;
+  font-weight: 600;
+  color: var(--brand-grey-zodiac);
+}
+
 /*---------------------- Menu responsive ----------------- */
 @media screen and (max-width: 60rem) {
   
-  html {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  body {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
   main {
     padding: 0 3rem;
-    display: flex;
-    flex-direction: column;
+    margin-top: 17rem;
   }
 
-  .name,
-  .title-job {
-    font-size: 3rem;
-    font-weight: 600;
-    text-transform: capitalize;
+  .logo {
+    max-width: 5rem;
+    height: 10vh;
+    background-image: url(/assets/images/logo-mobile.png);  
   }
 
   .accessibilty {
     font-size: 2rem;
-  }
-
-  .container {
-    height: auto;
-    width: auto;
-    background-color: rgb(210, 189, 189);
-    margin-right: 0;
-    padding: 3rem;
-    margin-top: 20rem;
   }
 
   .navigation__mobile {
@@ -327,8 +326,8 @@ h1, h2 {
   
   .navigation__mobile_close svg {
     stroke: var(--brand-moon-raker);
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     position: absolute;
     top: 1.6rem;
     right: 1.6rem;
@@ -350,22 +349,12 @@ h1, h2 {
 
   .media_list {
     position: fixed;
-    left: -170px;
-  }
-
-  .container-name {
-    line-height: 4rem;
+    margin: 0;
   }
 
   .text-about {
     line-height: 2rem;
     text-align: left;
-  }
-
-  .container-cards {
-    width: 40vh;
-    min-height: 600px;
-    flex-direction: column;
   }
 }
 
