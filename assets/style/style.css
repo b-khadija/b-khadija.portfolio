@@ -109,7 +109,9 @@ body {
 main {
   display: flex;
   align-items: center;
-  margin-top: 17rem;
+  margin: 15rem auto 0;
+  font-family: 'Poppins', sans-serif;
+  max-width: 70rem;
 }
 
 .media_list {
@@ -118,7 +120,7 @@ main {
   z-index: 12;
   display: flex;
   flex-direction: column;
-  margin-left: 3rem;
+  margin-left: .8rem;
 }
 
 .icons-media {
@@ -181,6 +183,11 @@ main {
   padding-top: 18rem;
 }
 
+.media_link {
+  text-decoration: none;
+  color: var(--brand-moon-raker);
+}
+
 .title-project {
   font-size: 2rem;
   text-align: center;
@@ -201,11 +208,6 @@ main {
   font-size: 3rem;
   font-weight: 600;
   text-transform: capitalize;
-}
-
-.title {
-  display: flex;
-  flex-direction: column;
 }
 
 .title-job {
@@ -255,12 +257,102 @@ main {
   color: var(--brand-grey-zodiac);
 }
 
+.container-about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--brand-puerto-rico);
+  margin-bottom: 0.6rem;
+}
+
+.about-paragraph {
+  line-height: 1.5rem;
+  max-width: 45rem;
+}
+
+.container-project {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.card {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px;
+  border: .1rem solid black;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  touch-action: manipulation;
+}
+
+.card::after {
+  content: '';
+  background-color: var(--brand-puerto-rico);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: .7rem;
+  left: .7rem;
+  transition: 0.2s;
+}
+
+.card:hover::after {
+  top: 0;
+  left: 0;
+} 
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons-card {
+  color: var(--brand-moon-raker);
+  font-size: 2rem;
+}
+
+.icons-card-git {
+  color: var(--brand-grey-zodiac);
+  cursor: pointer;
+}
+
+.coming-project-image {
+  width: 4rem;
+  margin: 0 auto;
+}
+
+
+
 /*---------------------- Menu responsive ----------------- */
 @media screen and (max-width: 60rem) {
   
   main {
     padding: 0 3rem;
-    margin-top: 17rem;
+    margin: 17rem auto 0;
   }
 
   .logo {
@@ -348,6 +440,18 @@ main {
   .text-about {
     line-height: 2rem;
     text-align: left;
+  }
+
+  .container-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .card {
+    max-width: 40rem;
+    margin-bottom: 3rem;
   }
 }
 
