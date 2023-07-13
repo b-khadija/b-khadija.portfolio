@@ -3,301 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/png" href="./images/logo-favicon.png"/>
-  <link rel="stylesheet" href="./css/portfolio.css">
-  <link rel="stylesheet" href="./css/portfolio.css">
-  <script src="https://kit.fontawesome.com/e784bea3c1.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Portfolio - Khadija</title>
-  <script src="./js/portfolio.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-NRL9QP/eayPDyhQ+Oa83UxH3eWtVeHA7i+J+MHl5hsOjB5zsJz3sOsJn+dLplZbWCx62S3IO9EhXZk0anHfLGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Khadija Bayssir</title>
 </head>
 <body>
-  <header role="banner">
+  <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
+  <header role="banner" class="header-container">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="./assets/images/logo.png" alt="" class="logo">
+      </a>
+    </div>
     <nav role="navigation" class="navigation">
-        <a href="index.html">
-          <img class="logo" src="./images/logo.png" alt="logo">
-        </a>
-      <ul class="navigation-list">
-        <li class="navigation-element"><a class="navigation-link" href="#aPropos"><span class="color-puerto">01.</span>À propos</a></li>
-        <li class="navigation-element"><a class="navigation-link" href="#experiences"><span class="color-puerto">02.</span>Expériences</a></li>
-        <li class="navigation-element"><a class="navigation-link" href="#projets"><span class="color-puerto">03.</span>Projets</a></li>
-        <li class="navigation-element"><a class="navigation-link" href="#competences"><span class="color-puerto">04.</span>Compétences</a></li>
-        <li class="navigation-element"><a class="navigation-link" href="#contact"><span class="color-puerto">05.</span>Contact</a></li>
+      <div class="navigation__mobile_close" onclick="closeMenuMobile()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>        
+      </div>
+      <ul class="navigation__items">
+        <li class="navigation__element">
+          <a class="navigation__link" href="#about">À propos</a>
+        </li>
+        <li class="navigation__element">
+          <a class="navigation__link" href="#projects">Projets</a>
+        </li>
+        <li class="navigation__element">
+          <a class="navigation__link" href="#skills">Compétences</a>
+        </li>
+        <li class="navigation__element">
+          <a class="navigation__link" href="#contact">Contact</a>
+        </li>
       </ul>
-      <button class="hamburger" aria-expanded="false" aria-controls="Menu de navigation mobile" type="button">
-        <!-- material icons https://material.io/resources/icons/ -->
-        <i class="menuIcon material-icons" aria-describedby="Menu de navigation mobile" aria-checked="false">menu</i>
-        <i class="closeIcon material-icons">close</i>
-      </button>  
+      <div>
+        <i class="fas fa-bars"></i>
+      </div>
+      <div>
+        <i class="fas fa-times"></i>
+      </div>
     </nav>
+    <div class="navigation__mobile" onclick="openMenuMobile()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>      
+    </div>
   </header>
   <main role="main">
-    <section class="introduction">
-      <div>
-        <h1>Je m'appelle <span class="color-moon">Khadija Bayssir </span>, <span class="color-puerto">Développeuse FullStack | spécialisé en accessibilité numérique</span><br> Bienvenue sur mon <span class="color-puerto">portfolio </span>!</h1>
-      </div>
-      <div class="container-illustration">
-        <img src="../images/business-woman.png" alt="">
-        <p class="credit-illustration">
-          Illustration by <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">Icons 8</a> from <a href="https://icons8.com/illustrations">Ouch!</a>
-        </p>
-      </div>
-    </section>
-    <section class="about" id="aPropos">
-      <div class="header-section">
-        <h2 class="uppercase"><span class="color-puerto">01.</span>À propos de moi</h2>
-        <span class="line"></span>
-      </div>
-      <p class="font-josefin">
-        Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation <span class="color-puerto">Ada Tech School</span>, c’est une école <span class="color-puerto">Inclusive</span> avec une approche pédagogique <span class="color-puerto">alternative</span> qui a pour mission de construire une nouvelle culture tech plus ouverte, <span class="color-puerto">féminine</span> et créative.
-      </p>
-    </section>
-    <section id="experiences">
-      <div class="header-section">
-        <h2 class="uppercase"><span class="color-puerto">02.</span>Expériences professionnelles</h2>
-        <span class="line"></span>
-      </div>
-      <div class="card" data-state="#ada">
-        <div class="card-buttons">
-          <button data-section="#ada" class="is-active button-exeperience">Ada Tech School</button>
-          <button data-section="#pix" class="button-exeperience">Pix</button>
-          <button data-section="#exxelia" class="button-exeperience">Exxelia</button>
-          <button data-section="#theBodyShop" class="button-exeperience">The body shop</button>
-         </div>
-       <div class="card-main">
-        <section class="card-section is-active" id="ada">
-          <div class="card-content">
-            <h3 class="job-title">Conceptrice développeuse d’application </h3>
-            <p><span class="color-puerto">Formation (21 mois)</span> | Janvier 2023 à 2024</p>
-            <ul class="missions">
-              <li class="details-mission">Concevoir et développer des composants d’interface utilisateur en intégrant les recommandations de sécurité</li>
-              <li class="details-mission">Concevoir et développer la persistance des données en intégrant les recommandations de sécurité</li>
-              <li class="details-mission">Concevoir et développer une application multicouche répartie en intégrant les recommandations de sécurité</li>
-            </ul>
-          </div>
-        </section>
-         <section class="card-section" id="pix">
-           <div class="card-content">
-             <h3 class="job-title">Développeuse intégratrice Front-end</h3>
-             <p><span class="color-puerto">Stage</span> | Octobre 2021 à Avril 2022</p>
-             <ul class="missions">
-               <li class="details-mission">Refonte page web et amélioration de l’accessibilité</li>
-               <li class="details-mission">Refonte page des épreuves(Linkedin, Instagram, Twitter, Facebook) et A11Y</li>
-               <li class="details-mission">Documentation des refontes réalisées</li>
-               <li class="details-mission">Organisation rétrospective d’équipe</li>
-             </ul>
-           </div>
-         </section>
-         <section class="card-section" id="exxelia">
-           <div class="card-content">
-             <h3 class="job-title">Technicienne métallographe</h3>
-             <p><span class="color-puerto">Intérim</span> | Janvier 2020 à Juillet 2020 </p>
-               <ul class="missions">
-                 <li class="details-mission">Enrobage des échantillons</li>
-                 <li class="details-mission">Polissage et observation au microscope et loupe binoculaire</li>
-                 <li class="details-mission">Compléter d’une fiche suiveuse</li>
-               </ul>
-           </div>
-         </section>
-         <section class="card-section" id="theBodyShop">
-           <div class="card-content">
-             <h3 class="job-title">Responsable boutique</h3>
-             <p><span class="color-puerto">Intérim</span> | Janvier 2020 à Juillet 2020 </p>
-               <p>Septembre 2015 à Mai 2019</p>
-               <ul class="missions">
-                 <li class="details-mission">Gestion administratives</li>
-                 <li class="details-mission">Formation des collaborateurs</li>
-                 <li class="details-mission">Gestion des stocks et inventaire</li>
-                 <li class="details-mission">Mise en place des merchandising </li>
-                 <li class="details-mission">Ouverture / fermeture des caisses et boutique</li>
-               </ul>
-           </div>
-         </section>
-       </div>
-     </div>
-    </section>
-    <section id="projets">
-      <div class="header-section">
-        <h2 class="uppercase"><span class="color-puerto">03.</span>Projets</h2>
-        <span class="line"></span>
-      </div>
-      <div class="card-container">
-        <section class="framer">
-          <h4>Travel World</h4>
-          <p class="details-project font-josefin">
-            Découvrez votre prochaine aventure à travers Travel World qui regorge d'idées de destinations de voyage captivantes. Plongez dans des paysages époustouflants, des cultures vibrantes et des expériences uniques, le tout accompagné d'images envoûtantes qui vous transporteront instantanément. 
-          </p>
-          <ul class="stack-list">
-            <li class="stack">HTML</li>
-            <li class="stack">CSS</li>
-            <li class="stack">JS</li>
-          </ul>
-          <div class="link-to-projects">
-            <a href="https://github.com/b-khadija/devProject" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </div>
-        </section>
-        <section class="framer">
-          <h4>Projet 2</h4>
-          <p class="details-project font-josefin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, repellat autem ipsum obcaecati amet ab veniam, fugiat incidunt ad libero ipsam accusamus provident est impedit excepturi, at esse! Eius, suscipit.</p>
-          <ul class="stack-list">
-            <li class="stack">VSCode</li>
-            <li class="stack">HTML</li>
-            <li class="stack">CSS</li>
-          </ul>
-          <div class="link-to-projects">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </div>
-        </section>
-        <section class="framer">
-          <h4>Projet 3</h4>
-          <p class="details-project font-josefin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, repellat autem ipsum obcaecati amet ab veniam, fugiat incidunt ad libero ipsam accusamus provident est impedit excepturi, at esse! Eius, suscipit.</p>
-          <ul class="stack-list">
-            <li class="stack">VSCode</li>
-            <li class="stack">HTML</li>
-            <li class="stack">CSS</li>
-          </ul>
-          <div class="link-to-projects">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </div>
-        </section>
-      </div>
-      <div>
-        <h3 class="uppercase challenge-title color-puerto">Challenges</h3>
-        <div class="card-container">
-          <section class="framer">
-            <div>
-              <i class="fa-regular fa-folder"></i>
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <h4>Challenge 1</h4>
-            <p class="details-project font-josefin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, repellat autem ipsum obcaecati amet ab veniam, fugiat incidunt ad libero ipsam accusamus provident est impedit excepturi, at esse! Eius, suscipit.</p>
-            <ul class="stack-list">
-              <li class="stack">VSCode</li>
-              <li class="stack">HTML</li>
-              <li class="stack">CSS</li>
-            </ul>
-          </section>
-          <section class="framer">
-            <div>
-              <i class="fa-regular fa-folder"></i>
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <h4>Challenge 2</h4>
-            <p class="details-project font-josefin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, repellat autem ipsum obcaecati amet ab veniam, fugiat incidunt ad libero ipsam accusamus provident est impedit excepturi, at esse! Eius, suscipit.</p>
-            <ul class="stack-list">
-              <li class="stack">VSCode</li>
-              <li class="stack">HTML</li>
-              <li class="stack">CSS</li>
-            </ul>
-          </section>
-          <section class="framer">
-            <div>
-              <i class="fa-regular fa-folder"></i>
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <h4>Challenge 3</h4>
-            <p class="details-project font-josefin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, repellat autem ipsum obcaecati amet ab veniam, fugiat incidunt ad libero ipsam accusamus provident est impedit excepturi, at esse! Eius, suscipit.</p>
-            <ul class="stack-list">
-              <li class="stack">VSCode</li>
-              <li class="stack">HTML</li>
-              <li class="stack">CSS</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </section>
-    <section id="competences">
-      <div class="header-section">
-        <h2 class="uppercase"><span class="color-puerto">04.</span>Compétences</h2>
-        <span class="line"></span>
-      </div>
-      <section class="skills-container">
-        <div class="card-skills">
-          <div class="skills-tittle">
-            <i class="fa-sharp fa-solid fa-code color-puerto"></i>
-            <h4 class="color-puerto">Hard skills & Outils</h4>
-          </div>
-          <div class="list-skill-details">
-            <i class="fa-brands fa-html5 icon" aria-label="html"></i>
-            <i class="fa-brands fa-css3-alt icon" aria-label="css"></i>
-            <i class="fa-brands fa-wordpress icon" aria-label="wordpress"></i>
-            <i class="fa-brands fa-square-js icon" aria-label="javascript"></i>
-            <i class="fa-brands fa-php icon" aria-label="php"></i>
-            <i class="fa-brands fa-sass icon" aria-label="sass"></i>
-            <i class="fa-brands fa-git icon" aria-label="git"></i>
-            <i class="fa-brands fa-github icon" aria-label="github"></i>
-            <i class="fa-brands fa-figma icon" aria-label="figma"></i>
-          </div>
-        </div>
-        <div class="card-skills">
-          <div class="skills-tittle">
-            <i class="fa-solid fa-briefcase color-puerto"></i>
-            <h4 class="color-puerto">Soft Skills</h4>
-          </div>
-          <div class="list-soft-skills">
-            <ul class="card-soft-skill">
-              <li class="soft-skill">
-                <i class="fa-solid fa-hands-clapping"></i>
-                Esprit d'équipe
-              </li>
-              <li class="soft-skill">
-                <i class="fa-solid fa-handshake-angle"></i>
-                Entraide-aide
-              </li>
-              <li class="soft-skill">
-                <i class="fa-sharp fa-solid fa-headphones-simple"></i>
-                À l'écoute
-              </li>
-              <li class="soft-skill">
-                <i class="fa-solid fa-box-archive"></i>
-                Organisé
-              </li>
-              <li class="soft-skill">
-                <i class="fa-solid fa-person-running"></i>
-                Adaptabilité
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </section>
-    <section class="contact" id="contact">
-      <div class="header-section">
-        <h2 class="uppercase"><span class="color-puerto">05.</span>Contact</h2>
-        <span class="line"></span>
-      </div>
-      <div>
-        <h4 class="color-puerto font-josefin contact-title">Restons <br> En Contact</h4>
-        <p class="text-contact">A la recherche d'un contrat en alternance pour mi-octobre 2023, avec un rythme de 4 jours en entreprise et 1 jour à l'école.</p>
-      </div>
-    </section>
-  </main>
-  <footer role="contentinfo">
-    <nav role="navigation" aria-label="navigation liens vers mes reseaux sociaux" class="navigation-footer">
-      <ul class="networks-list">
-        <li class="networks-item">
-          <a href="https://github.com/b-khadija" target="_blank" title="Lien vers mon github " class="networks-link">
-            <i class="fa-brands fa-github icon-social"></i>
-          </a>
+    <div>
+      <ul class="media_list">
+        <li class="media_element">
+          <a class="media_link" href="">Twitter</a>
         </li>
-        <li class="networks-item">
-          <a href="https://www.linkedin.com/in/khadija-bayssir/" target="_blank" title="Lien vers mon linkedin" class="networks-link">
-            <i class="fa-brands fa-linkedin icon-social"></i>
-          </a>
+        <li class="media_element">
+          <a class="media_link" href="">Linkedin</a>
         </li>
-        <li class="networks-item">
-          <a href="https://twitter.com/b1_khadija" target="_blank" title="Lien vers mon twitter" class="networks-link">
-            <i class="fa-brands fa-twitter icon-social"></i>
-          </a>
+        <li class="media_element">
+          <a class="media_link" href="">Github</a>
         </li>
       </ul>
-      <p class="credit-page">&copy;	2023 Khadija BAYSSIR</p>
-    </nav>
-  </footer>
+    </div>
+    <div id="home">
+      <section class="container container-name">
+        <h1 class="name">Khadija Bayssir</h1>
+        <h2 class="title-job">Développeuse web FullStack</h2> 
+        <p class="accessibilty">Accessibilité numérique</p> 
+      </section>
+    </div>
+    <div id="about">
+      <section class="container">
+        <h2>À propos</h2>
+        <p class="text-about">
+          Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation Ada Tech School, c’est une école Inclusive avec une approche pédagogique alternative qui a pour mission de construire une nouvelle culture tech plus ouverte, féminine et créative.
+          Après avoir suivi ma première formation au sein d'Oclock et Tanaguru, d'une durée de 4 mois, j'ai eu l'opportunité de mettre en pratique mes connaissances lors d'un stage de 6 mois au sein d'une entreprise. Cette expérience m'a permis de consolider mes acquis et d'observer le déroulement des projets dans le monde professionnel. Elle a non seulement confirmé ma décision de me reconvertir dans le développement web, mais a également renforcé ma passion pour ce domaine en constante évolution.
+        </p>
+      </section>
+    </div>
+    <div id="projects">
+      <section class="container">
+        <h2>Projets</h2>
+        <div class=" container-cards">
+          <div class="card">
+            <img class="image-project" src="./assets/images/travel.png" alt="">
+            <div class="icons">
+              <div class="icons-elements">
+                <a href="#" class="icons-link">
+                  <svg class="svg-project" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                  </svg>
+                </a>
+                <h4 class="title-project">StreamBerry - Clone</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="image-project" src="./assets/images/travel.png" alt="">
+            <div class="icons">
+              <div class="icons-elements">
+                <a href="#" class="icons-link">
+                  <svg class="svg-project" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                  </svg>
+                </a>
+                <h4 class="title-project">World Tour</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img class="image-project" src="./assets/images/travel.png" alt="">
+            <div class="icons">
+              <div class="icons-elements">
+                <a href="#" class="icons-link">
+                  <svg class="svg-project" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 496 512">
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                  </svg>
+                </a>
+                <h4 class="title-project">World Tour</h4>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+    <div id="skills">
+      <section class="container">
+        <h2>Compétences</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem vitae, ut velit cum voluptates sint possimus cumque aliquam cupiditate excepturi est quae ad impedit quasi? Minus iure est qui eaque.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iure beatae fugiat perspiciatis, praesentium veniam tempore est nam minima culpa officia hic esse, illum temporibus quo voluptatibus nisi at dolor?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam eos reiciendis voluptate illum at dolore, dolorem illo excepturi? Reiciendis possimus repudiandae amet officia, vitae consequatur. Voluptas aliquam ducimus esse vero.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nisi culpa qui harum excepturi expedita cumque illum explicabo eos provident eligendi saepe, quo numquam molestias sed soluta, odit alias laudantium?
+        </p>
+      </section>
+    </div>
+    <div id="contact">
+      <section class="container">
+        <h2>Contact</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem vitae, ut velit cum voluptates sint possimus cumque aliquam cupiditate excepturi est quae ad impedit quasi? Minus iure est qui eaque.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur iure beatae fugiat perspiciatis, praesentium veniam tempore est nam minima culpa officia hic esse, illum temporibus quo voluptatibus nisi at dolor?
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam eos reiciendis voluptate illum at dolore, dolorem illo excepturi? Reiciendis possimus repudiandae amet officia, vitae consequatur. Voluptas aliquam ducimus esse vero.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non nisi culpa qui harum excepturi expedita cumque illum explicabo eos provident eligendi saepe, quo numquam molestias sed soluta, odit alias laudantium?
+        </p>
+      </section>
+    </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
