@@ -2,18 +2,14 @@
 
 Création de la page principale du portfolio pour présenter les projets sur lesquels j'ai travaillé, et l'enrichir au fil du temps.
 
-
-
-## Guide de style 🎨
-
-![Frame 7](https://user-images.githubusercontent.com/77671984/198272492-73509248-9500-47c3-aba1-7f2efb5bf1be.png)
-
-
 ## Maquettes  🖌️	
 
 Réalisation de maquettes avec l'outil Figma
 
-![iPhone 14 - 1](https://user-images.githubusercontent.com/77671984/198271243-6786fa02-504c-43e3-96d2-e0bdbf1c0ac3.png)
-![iPad mini 8 3 - 1](https://user-images.githubusercontent.com/77671984/198271263-65b81933-b0d7-4707-8046-7e3f7f6dd601.png)
-![MacBook Air - 1](https://user-images.githubusercontent.com/77671984/198271284-0173fd55-3c6f-42ec-b008-cb57fd5b50e8.png)
+<img width="1428" alt="Capture d’écran 2023-07-18 à 14 06 22" src="https://github.com/b-khadija/b-khadija.portfolio/assets/77671984/daa25fba-d970-4093-a11f-61618ba322a5">
 
+<img width="1428" alt="Capture d’écran 2023-07-17 à 22 40 48" src="https://github.com/b-khadija/b-khadija.portfolio/assets/77671984/7ca6080e-7e00-443e-b070-68cdc52477d4">
+
+<img width="312" alt="Capture d’écran 2023-07-18 à 14 06 50" src="https://github.com/b-khadija/b-khadija.portfolio/assets/77671984/72c4420a-2fe7-42e9-89b3-9132534d20f2">
+
+<img width="312" alt="Capture d’écran 2023-07-18 à 14 07 26" src="https://github.com/b-khadija/b-khadija.portfolio/assets/77671984/71029fc8-b1e1-4b9a-a9b0-014fadffebbb">
