@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="stylesheet" href="assets/style/style.css">
-  <link rel="stylesheet" href="assets/style/reset.css">
   <title>Khadija Bayssir</title>
-  <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png" />
 </head>
 <body>
   <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
   <header role="banner" class="header-container">
-    <a class="logo" href="index.html"></a>
+    <a class="logo" href="index.html">Bkhadija</a>
     <nav role="navigation" class="navigation">
       <div class="navigation__mobile_close" onclick="closeMenuMobile()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -21,10 +20,10 @@
       </div>
       <ul class="navigation__items">
         <li class="navigation__element">
-          <a class="navigation__link" href="./assets/pages/about.html">À propos</a>
+          <a class="navigation__link" href="#aPropos">À propos</a>
         </li>
         <li class="navigation__element">
-          <a class="navigation__link" href="./assets/pages/project.html">Projets</a>
+          <a class="navigation__link" href="#projets">Projets</a>
         </li>
       </ul>
       <div>
@@ -41,41 +40,66 @@
     </div>
   </header>
   <main role="main">
-    <div>
-      <ul class="media_list">
-        <li class="media_element">
-          <a class="media_link" href="https://twitter.com/b1_khadija" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-square-twitter icons-media"></i>
-          </a>
-        </li>
-        <li class="media_element">
-          <a class="media_link" href="https://www.linkedin.com/in/khadija-bayssir/" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin icons-media"></i>
-          </a>
-        </li>
-        <li class="media_element">
-          <a class="media_link" href="https://github.com/b-khadija" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-square-github icons-media"></i>
-          </a>
-        </li>
-      </ul>
+    <div class="container">
+      <div class="wrapper-img">
+        <div class="box"></div>
+        <div>
+          <img class="image-profile" src="./assets/images/hero.jpg" alt="" />
+        </div>
+      </div>
+      <div class="circle-shape"></div>
+      <div class="circle-shape-2"></div>
+      <div class="circle-shape-3"></div>
+      <div class="blocks">
+        <span class="block-1 block">Développeuse</span>
+        <span class="block-2 block text-lg">FullStack</span>
+      </div>
     </div>
-    <div class="content homepage">
-      <section class="presentation">
-        <h1 class="name">
-          Khadija Bayssir
-        </h1>
-        <h2 class="title-job">
-          Développeuse web FullStack
-        </h2> 
-        <p class="accessibilty">Accessibilité numérique</p>
-      </section>
-      <button class="home-button-about" role="button">
-        <a class="home-button-about-link" href="assets/pages/about.html">
-          À propos
-        </a>
-      </button>
-    </div>
+    <section class="section-about">
+      <div class="about" id="aPropos">
+        <h2 class="title-about">À propos</h2>
+        <p class="text-about">
+          Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation Ada Tech School, c’est une école Inclusive avec une approche pédagogique alternative qui a pour mission de construire une nouvelle culture tech plus ouverte, féminine et créative.
+          Après avoir suivi ma première formation au sein d'Oclock et Tanaguru, d'une durée de 4 mois, j'ai eu l'opportunité de mettre en pratique mes connaissances lors d'un stage de 6 mois au sein d'une entreprise. Cette expérience m'a permis de consolider mes acquis et d'observer le déroulement des projets dans le monde professionnel. Elle a non seulement confirmé ma décision de me reconvertir dans le développement web, mais a également renforcé ma passion pour ce domaine en constante évolution.
+          A la recherche d'un contrat en alternance pour mi-octobre 2023, avec un rythme de 4 jours en entreprise et 1 jour à l'école.
+        </p>
+      </div>
+    </section>
+    <section class="projects" id="projets">
+      <h3 class="title-project-section">Projets</h3>
+      <div class="container-projects">
+        <div class="container-image">
+          <img class="project-image" src="./assets/images/streamberry.png" alt="">
+        </div>
+        <div class="text-project">
+          <h4 class="title-project">StreamBerry Clone</h4>
+          <p>
+            Un clone de Netflix réaliser avec ReactJS HTML Sass JS
+          </p>
+          <div class="icons-link">
+            <a class="icon-link-github" href="https://github.com/b-khadija/NetflixApp/tree/star-project-app-netflix" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-square-github" style="color: #ebe9db;"></i>            
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container-projects">
+        <div class="container-image">
+          <img class="project-image" src="./assets/images/travel-home.png" alt="">
+        </div>
+        <div class="text-project">
+          <h4 class="title-project">World Tour</h4>
+          <p>
+            Un blog de voyage réaliser avec HTML CSS JS
+          </p>
+          <div class="icons-link">
+            <a class="icon-link-github" href="https://github.com/b-khadija/WorldTour" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-square-github" style="color: #ebe9db;"></i>            
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <script src="script.js"></script>
 </body>
