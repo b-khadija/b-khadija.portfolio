@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Khadija Bayssir</title>
@@ -20,10 +20,10 @@
       </div>
       <ul class="navigation__items">
         <li class="navigation__element">
-          <a class="navigation__link" href="./assets/pages/about.html">À propos</a>
+          <a class="navigation__link" href="#aPropos">À propos</a>
         </li>
         <li class="navigation__element">
-          <a class="navigation__link" href="./assets/pages/project.html">Projets</a>
+          <a class="navigation__link" href="#projets">Projets</a>
         </li>
       </ul>
       <div>
@@ -56,21 +56,49 @@
       </div>
     </div>
     <section class="section-about">
-      <h2 class="title-about">À propos</h2>
-      <p class="text-about">
-        Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation Ada Tech School, c’est une école Inclusive avec une approche pédagogique alternative qui a pour mission de construire une nouvelle culture tech plus ouverte, féminine et créative.
-        Après avoir suivi ma première formation au sein d'Oclock et Tanaguru, d'une durée de 4 mois, j'ai eu l'opportunité de mettre en pratique mes connaissances lors d'un stage de 6 mois au sein d'une entreprise. Cette expérience m'a permis de consolider mes acquis et d'observer le déroulement des projets dans le monde professionnel. Elle a non seulement confirmé ma décision de me reconvertir dans le développement web, mais a également renforcé ma passion pour ce domaine en constante évolution.
-        A la recherche d'un contrat en alternance pour mi-octobre 2023, avec un rythme de 4 jours en entreprise et 1 jour à l'école.
-      </p>
+      <div class="about" id="aPropos">
+        <h2 class="title-about">À propos</h2>
+        <p class="text-about">
+          Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation Ada Tech School, c’est une école Inclusive avec une approche pédagogique alternative qui a pour mission de construire une nouvelle culture tech plus ouverte, féminine et créative.
+          Après avoir suivi ma première formation au sein d'Oclock et Tanaguru, d'une durée de 4 mois, j'ai eu l'opportunité de mettre en pratique mes connaissances lors d'un stage de 6 mois au sein d'une entreprise. Cette expérience m'a permis de consolider mes acquis et d'observer le déroulement des projets dans le monde professionnel. Elle a non seulement confirmé ma décision de me reconvertir dans le développement web, mais a également renforcé ma passion pour ce domaine en constante évolution.
+          A la recherche d'un contrat en alternance pour mi-octobre 2023, avec un rythme de 4 jours en entreprise et 1 jour à l'école.
+        </p>
+      </div>
     </section>
-
-    <section class="sec2">
-      <div class="container2">
-        <div class="sec2-inner">
-          <div></div>
+    <section class="projects" id="projets">
+      <h3 class="title-project-section">Projets</h3>
+      <div class="container-projects">
+        <div class="container-image">
+          <img class="project-image" src="./assets/images/streamberry.png" alt="">
+        </div>
+        <div class="text-project">
+          <h4 class="title-project">StreamBerry Clone</h4>
+          <p>
+            Un clone de Netflix réaliser avec ReactJS HTML Sass JS
+          </p>
+          <div class="icons-link">
+            <a class="icon-link-github" href="https://github.com/b-khadija/NetflixApp/tree/star-project-app-netflix" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-square-github" style="color: #ebe9db;"></i>            
+            </a>
+          </div>
         </div>
       </div>
-
+      <div class="container-projects">
+        <div class="container-image">
+          <img class="project-image" src="./assets/images/travel-home.png" alt="">
+        </div>
+        <div class="text-project">
+          <h4 class="title-project">World Tour</h4>
+          <p>
+            Un blog de voyage réaliser avec HTML CSS JS
+          </p>
+          <div class="icons-link">
+            <a class="icon-link-github" href="https://github.com/b-khadija/WorldTour" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-square-github" style="color: #ebe9db;"></i>            
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <script src="script.js"></script>

@@ -115,3 +115,5 @@ function handleTransform() {
 }
 handleTransform();
 window.addEventListener('resize', handleTransform);
+
+//Section about
