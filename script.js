@@ -30,90 +30,76 @@ function closeMenuMobile() {
   document.querySelector(".overlay_menu_mobile").classList.remove("open");
 }
 
-// Gsap => TweenMax
+window.addEventListener('load', function () {
+  var preloader = document.getElementById('preloader-wrapper');
+  var imageWrapper = document.getElementById('image-wrapper-one');
 
-TweenMax.to('.block-1', 2, {
-  x: '-180',
-  y: '-100',
-  scale: '2.4',
-  ease: Expo.easeInOut,
-});
-
-TweenMax.to('.block-2', 2, {
-  x: '-180',
-  y: '60',
-  scale: '1.2',
-  ease: Expo.easeInOut,
-});
-
-
-TweenMax.to('.box', 2.4, {
-  y: '-100%',
-  ease: Expo.easeInOut,
-});
-
-TweenMax.from('.circle-shape', 2.4, {
-  scale: '0',
-  ease: Expo.easeInOut
-});
-
-TweenMax.from('.circle-shape-2', 2.4, {
-  scale: '0',
-  ease: Expo.easeInOut
-});
-
-TweenMax.from('.circle-shape-3', 2.4, {
-  scale: '0',
-  ease: Expo.easeInOut
-});
-
-TweenMax.from('.logo', 1.6, {
-  opacity: 0,
-  y: 60,
-  ease: Expo.easeInOut,
-  delay: 0.6
-})
-
-TweenMax.from('.image-profile', 2, {
-  opacity: 0.2,
-  ease: Expo.easeInOut,
-  delay: 2.4
-});
-
-//Media queries pour les animation en mobile
-let isSmallScreen = false;
-
-function handleTransform() {
-  if (window.innerWidth < 60 * 16 && !isSmallScreen) {
-    // L'écran est passé en dessous de 60rem, appliquer la transformation pour les petits écrans
-    TweenMax.to('.block-1', 2, {
-      x: '62',
-      y: '-240',
-      scale: '2.4',
-      ease: Expo.easeInOut,
+  setTimeout(function () {
+    // Réduire l'opacité du preloader
+    preloader.style.opacity = 'fade-out 4s cubic-bezier(.6, .2, .1, 1)';
+    preloader.addEventListener('transitionend', function () {
+      // Cacher le preloader une fois la transition terminée
+      preloader.style.display = 'none';
     });
-    //-50px, -46px
-    TweenMax.to('.block-2', 2, {
-      x: '-30',
-      y: '-160',
-      scale: '1.2',
-      ease: Expo.easeInOut,
-    });
+     // Augmenter l'opacité de l'image de fond pour révéler le contenu
+    imageWrapper.style.opacity = '1';
+  }, 2000);
+});
 
-    TweenMax.to('.circle-shape-2', 2.4, {
-      x: '-50',
-      y: '-46',
+// Fonction pour animer le job title
+document.addEventListener("DOMContentLoaded", function() {
+  const jobElements = document.querySelectorAll(".job-animation");
+  
+  function animateElements() {
+    jobElements.forEach(function(element, index) {
+      setTimeout(function() {
+        element.style.opacity = "1";
+        element.style.transform = "translateY(0)";
+      }, index * 500);
     });
-
-    TweenMax.to('.circle-shape-3', 2.4, {
-      x: '-50',
-      y: '-215',
-    });
-
-    isSmallScreen = true;
   }
-}
-handleTransform();
-window.addEventListener('resize', handleTransform);
+  
+  setTimeout(animateElements, 4500);
+});
 
-//Section about
+//Animation hover projects preview
+// const items = document.querySelectorAll('.item');
+// const image = document.querySelector('img.image-project');
+
+// items.forEach((el) => {
+//   const projectImage = el.querySelector('.image-project');
+
+//   el.addEventListener('mouseover', (e) => {
+//     projectImage.style.zIndex = 99;
+//   });
+
+//   el.addEventListener('mousemove', (e) => {
+//     projectImage.style.top = e.clientY + 'px';
+//     projectImage.style.left = e.clientX + 'px';
+//   });
+
+//   el.addEventListener('mouseleave', (e) => {
+//     projectImage.style.zIndex = 1;
+//   });
+// });
+
+
+//Animation hover projects preview
+const link = document.querySelectorAll('.link');
+const hoverReveal = document.querySelectorAll('.hover-reveal');
+const linkImages = document.querySelectorAll('.hidden-img');
+
+for(let i = 0; i < link.length; i++) {
+  link[i].addEventListener('mousemove', (e) => {
+    hoverReveal[i].style.opacity = 1;
+    hoverReveal[i].style.transform = `translate(-100%, -50%) rotate(2deg)`;
+    linkImages[i].style.transform = 'scale(1, 1)';
+    hoverReveal[i].style.left = e.clientX + "px";
+  });
+  link[i].addEventListener('mouseleave', (e) => {
+    hoverReveal[i].style.opacity = 0;
+    hoverReveal[i].style.transform = `translate(-50%, -50%) rotate(-2deg)`;
+    linkImages[i].style.transform = 'scale(0.8, 0.8)';
+   
+  });
+}
