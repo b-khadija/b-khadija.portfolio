@@ -11,7 +11,7 @@
 <body>
   <div class="overlay_menu_mobile" onclick="closeMenuMobile()"></div>
   <header role="banner" class="header-container">
-    <a class="logo" href="index.html">Bkhadija</a>
+    <a class="logo" href="index.html">Khadija Bayssir</a>
     <nav role="navigation" class="navigation">
       <div class="navigation__mobile_close" onclick="closeMenuMobile()">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -20,10 +20,10 @@
       </div>
       <ul class="navigation__items">
         <li class="navigation__element">
-          <a class="navigation__link" href="#aPropos">À propos</a>
+          <a class="navigation__link" href="#about">À propos</a>
         </li>
         <li class="navigation__element">
-          <a class="navigation__link" href="#projets">Projets</a>
+          <a class="navigation__link" href="#projects-container">Projets</a>
         </li>
       </ul>
       <div>
@@ -39,68 +39,97 @@
       </svg>      
     </div>
   </header>
-  <main role="main">
-    <div class="container">
-      <div class="wrapper-img">
-        <div class="box"></div>
-        <div>
-          <img class="image-profile" src="./assets/images/hero.jpg" alt="" />
-        </div>
-      </div>
-      <div class="circle-shape"></div>
-      <div class="circle-shape-2"></div>
-      <div class="circle-shape-3"></div>
-      <div class="blocks">
-        <span class="block-1 block">Développeuse</span>
-        <span class="block-2 block text-lg">FullStack</span>
-      </div>
+  <div id="preloader-wrapper">
+    <div id="preloader">
+      <h1>Bienvenue sur mon portfolio</h1>
     </div>
-    <section class="section-about">
-      <div class="about" id="aPropos">
-        <h2 class="title-about">À propos</h2>
-        <p class="text-about">
-          Passionnée par les nouvelles technologies, j’ai entamé une reconversion professionnelle avec la formation Ada Tech School, c’est une école Inclusive avec une approche pédagogique alternative qui a pour mission de construire une nouvelle culture tech plus ouverte, féminine et créative.
-          Après avoir suivi ma première formation au sein d'Oclock et Tanaguru, d'une durée de 4 mois, j'ai eu l'opportunité de mettre en pratique mes connaissances lors d'un stage de 6 mois au sein d'une entreprise. Cette expérience m'a permis de consolider mes acquis et d'observer le déroulement des projets dans le monde professionnel. Elle a non seulement confirmé ma décision de me reconvertir dans le développement web, mais a également renforcé ma passion pour ce domaine en constante évolution.
-          A la recherche d'un contrat en alternance pour mi-octobre 2023, avec un rythme de 4 jours en entreprise et 1 jour à l'école.
-        </p>
-      </div>
-    </section>
-    <section class="projects" id="projets">
-      <h3 class="title-project-section">Projets</h3>
-      <div class="container-projects">
-        <div class="container-image">
-          <img class="project-image" src="./assets/images/streamberry.png" alt="">
+  </div> 
+  <main role="main" id="image-wrapper-one">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-job">
+          <span class="job-animation">Développeuse</span>
+          <span class="job-animation">FullStack</span>
         </div>
-        <div class="text-project">
-          <h4 class="title-project">StreamBerry Clone</h4>
-          <p>
-            Un clone de Netflix réaliser avec ReactJS HTML Sass JS
-          </p>
-          <div class="icons-link">
-            <a class="icon-link-github" href="https://github.com/b-khadija/NetflixApp/tree/star-project-app-netflix" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-square-github" style="color: #ebe9db;"></i>            
+        <div class="container-link-social">
+          <div class="link-social">
+            <a class="links" href="https://github.com/b-khadija" target="_blank">
+              Github
+              <span>
+                <svg class="arrow-link" data-v-4cb75c86="" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path data-v-4cb75c86="" d="M9.66353 6.95516L14.8459 8.34376L13.4573 13.5261" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                  </path> <path data-v-4cb75c86="" d="M5.64453 13.6562L14.754 8.39687" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
+            </a>
+            <a class="links" href="https://www.linkedin.com/in/khadija-bayssir/" target="_blank">
+              Linkedin
+              <span>
+                <svg class="arrow-link" data-v-4cb75c86="" width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path data-v-4cb75c86="" d="M9.66353 6.95516L14.8459 8.34376L13.4573 13.5261" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                  </path> <path data-v-4cb75c86="" d="M5.64453 13.6562L14.754 8.39687" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                  </path>
+                </svg>
+              </span>
             </a>
           </div>
         </div>
-      </div>
-      <div class="container-projects">
-        <div class="container-image">
-          <img class="project-image" src="./assets/images/travel-home.png" alt="">
-        </div>
-        <div class="text-project">
-          <h4 class="title-project">World Tour</h4>
-          <p>
-            Un blog de voyage réaliser avec HTML CSS JS
-          </p>
-          <div class="icons-link">
-            <a class="icon-link-github" href="https://github.com/b-khadija/WorldTour" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-square-github" style="color: #ebe9db;"></i>            
-            </a>
+      </section>
+
+      <section id="projects-container" class="image-hover-container">
+        <ul class="list-item">
+          <li class="list-item-project">
+            <div class="link">
+              <span class="project-name">StreamBerry</span>
+              <a class="link-github-project" href="https://github.com/b-khadija/NetflixApp" target="_blank">
+                Github
+              </a>
+              <div class="hover-reveal image01">
+                <img class="hidden-img" src="./assets/images/streamberry.png" alt="">
+              </div>
+            </div>
+          </li>
+          <li class="list-item-project">
+            <div class="link">
+              <span class="project-name">WorldTravel</span>
+              <a class="link-github-project" href="https://github.com/b-khadija/WorldTour" target="_blank">
+                Github
+              </a>
+              <div class="hover-reveal image01">
+                <img class="hidden-img" src="./assets/images/travel-home.png" alt="">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="container-about" id="about">
+        <div class="about">
+          <div class="radius-image">
+            <img class="about-image" src="./assets/images/hero.jpg" alt="">
+          </div>
+          <div class="about-text">
+            <h3 class="title-about">À propos</h3>
+            <p class="about-paragraph">
+              Passionnée par les nouvelles technologies, je suis actuellement en formation à Ada Tech School, une école axée sur une culture tech ouverte et créative. J'ai également acquis de l'expérience lors d'un stage de 6 mois en développement web. Maintenant, je recherche un contrat en alternance à partir de mi-octobre 2023, avec un rythme de 4 jours en entreprise et 1 jour à l'école.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
+  <!-- début du footer -->
+  <footer role="contentinfo">
+    <ul>
+      <li>
+        <a href="#">Linkedin</a>
+      </li>
+      <li>
+        <a href="#">Github</a>
+      </li>
+    </ul>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
