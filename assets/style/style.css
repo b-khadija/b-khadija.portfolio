@@ -13,12 +13,6 @@
   src: url(../fonts/GeneralSans-Medium.woff);
 }
 
-@font-face {
-  font-family: 'GeneralSansB';
-  src: url(../fonts/GeneralSans-Bold.woff);
-}
-
-
 :root {
   --brand-background : #000000;
   --brand-color-font : #A3A3A3;
