@@ -408,7 +408,7 @@ h2 {
 @media screen and (max-width: 60rem) {
   
   main {
-    padding: 0 3rem;
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -500,6 +500,11 @@ h2 {
 
   .list-item {
     width: 93%;
+  }
+
+  #projects-container {
+    margin: 0;
+    justify-content: center;
   }
 
   .project-name {
