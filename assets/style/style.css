@@ -216,6 +216,8 @@ h2 {
   padding: 2rem 0;
   position: absolute;
   bottom: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .link-social {
@@ -500,6 +502,18 @@ h2 {
 
   .list-item {
     width: 93%;
+  }
+
+  .hero {
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .link-social {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.4rem;
   }
 
   #projects-container {
