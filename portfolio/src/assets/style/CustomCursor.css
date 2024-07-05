@@ -1,0 +1,70 @@
+body {
+  cursor: none;
+}
+
+#invertedcursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 0.1rem solid #0d1f22;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  pointer-events: none;
+  display: block;
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #c97a26;
+}
+
+.cursor-dot-outline {
+  width: 40px;
+  height: 40px;
+  border: 0.1rem solid #90581d;
+  background-color: rgba(231, 188, 187, 0.5);
+}
+
+a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+a:hover .icon {
+  transform: rotate(45deg);
+}
