@@ -22,10 +22,10 @@ const Header = () => {
           <Link to="/Project.js" className="hover:text-DarkCyan cursor-none">
             Projets
           </Link>
-          <Link to="About.js" className="hover:text-DarkCyan cursor-none">
+          <Link to="/About.js" className="hover:text-DarkCyan cursor-none">
             À propos
           </Link>
-          <Link to="Contact.js" className="hover:text-DarkCyan cursor-none">
+          <Link to="/Contact.js" className="hover:text-DarkCyan cursor-none">
             Contact
           </Link>
         </nav>
@@ -90,7 +90,7 @@ const Header = () => {
             >
               <li role="none">
                 <Link
-                  to="/Home.js"
+                  to="/"
                   role="menuitem"
                   onClick={toggleMenu}
                   className="text-Fulvous text-xl hover:text-DarkCyan"
@@ -110,7 +110,7 @@ const Header = () => {
               </li>
               <li role="none">
                 <Link
-                  to="About.js"
+                  to="/About.js"
                   role="menuitem"
                   onClick={toggleMenu}
                   className="text-Fulvous text-xl hover:text-DarkCyan"
@@ -120,7 +120,7 @@ const Header = () => {
               </li>
               <li role="none">
                 <Link
-                  to="Contact.js"
+                  to="/Contact.js"
                   role="menuitem"
                   onClick={toggleMenu}
                   className="text-Fulvous text-xl hover:text-DarkCyan"
