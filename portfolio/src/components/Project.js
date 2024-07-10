@@ -80,8 +80,8 @@ const Projects = () => {
   return (
     <div className="container mx-auto py-8 flex flex-col items-center cursor-none">
       <CustomCursor />
-      <h1 className="text-3xl font-bold tracking-widest mb-8 text-white font-RobotoSlab">
-        Mes Projets
+      <h1 className="text-3xl uppercase font-bold tracking-widest mb-8 text-Black font-RobotoSlab">
+        Projets
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 cursor-none">
         {projects.map((project, index) => (
@@ -95,10 +95,10 @@ const Projects = () => {
               alt={project.title}
               className="w-full h-64 object-cover mb-4 cursor-none"
             />
-            <h2 className="text-2xl font-semibold mb-2 text-white cursor-none">
+            <h2 className="text-2xl font-semibold mb-2 text-RichBlack cursor-none">
               {project.title}
             </h2>
-            <p className="mb-4 text-DarkCyan cursor-none">
+            <p className="mb-4 text-lg text-DarkCyan cursor-none">
               {project.description}
             </p>
           </div>
