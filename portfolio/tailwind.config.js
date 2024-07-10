@@ -7,6 +7,7 @@ module.exports = {
         RichBlack: "#0D1F22",
         Fulvous: "#E18726",
         DarkCyan: "#0B7A75",
+        Black: "#161616",
       },
       fontFamily: {
         RobotoSlab: ["Roboto Slab", "sans-serif"],
