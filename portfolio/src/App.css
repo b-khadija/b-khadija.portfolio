@@ -12,13 +12,12 @@ html {
 body {
   font-size: 16px;
   margin: 0;
-  background-image: url("../src/assets/images/plufow-le-studio-Rpeu1Hcc97Q-unsplash.jpg");
-  background-size: cover;
-  background-position: center;
+  background: url("./assets//images/back.png");
   height: 100vh;
   position: relative;
   font-family: "GeneralSans-Medium", sans-serif;
   overflow: hidden;
+  mix-blend-mode: overlay;
 
   &::before {
     content: "";
@@ -32,52 +31,51 @@ body {
   }
 }
 
-body::after {
-  content: "Photo de Plufow Le Studio sur Unsplash";
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  color: #fff;
-  font-size: 0.5rem;
-  padding: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0.5rem;
-}
-
 .App {
   font-size: 16px;
   text-align: center;
   min-height: 100vh;
 }
 
-.circular-text {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+/* Background Styles */
+.background {
+  position: absolute;
+  display: block;
+  width: 40rem;
+  height: 40rem;
+  z-index: -1;
+  opacity: 1;
+  background: linear-gradient(
+    132deg,
+    rgba(255, 116, 72, 0.5) 35%,
+    rgba(255, 72, 72, 0.5) 54%,
+    rgba(98, 72, 255, 0.5) 80%
+  );
+  border-radius: 50rem;
+  filter: blur(6.4rem);
 }
 
-.text {
-  font-weight: 600;
-  letter-spacing: 1.7px;
-  text-transform: uppercase;
-  font-family: "Kanit";
-  font-size: 17px;
-  fill: #111;
-  text-shadow: 2px 0px #ccc;
+.background-bottom-right {
+  top: auto;
+  left: auto;
+  right: -6rem;
+  bottom: -15rem;
 }
 
-#rotatingText {
-  animation-name: rotate-circle;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+.background-top-left {
+  top: -15rem;
+  left: -6rem;
+  right: auto;
+  bottom: auto;
 }
 
-@keyframes rotate-circle {
-  to {
-    transform: rotate(1turn);
-  }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
