@@ -1,0 +1,50 @@
+.animation-menu * {
+  box-sizing: border-box;
+  transition: all 0.35s ease;
+}
+
+.animation-menu li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 1.5em;
+  overflow: hidden;
+  position: relative;
+}
+
+.animation-menu a {
+  padding: 0.3em 0;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  text-decoration: none;
+}
+
+.animation-menu a:before,
+.animation-menu a:after {
+  position: absolute;
+  transition: all 0.35s ease;
+}
+
+.animation-menu a:before {
+  bottom: 100%;
+  display: block;
+  height: 0.2rem;
+  width: 100%;
+  content: "";
+  background-color: #e67e22;
+}
+
+.animation-menu a:after {
+  bottom: 100%;
+  left: 0;
+  padding: 0.5em 0;
+  content: attr(data-hover);
+  white-space: nowrap;
+  transform: translateY(-150%);
+}
+
+.animation-menu li:hover a,
+.animation-menu .current a {
+  transform: translateY(100%);
+}

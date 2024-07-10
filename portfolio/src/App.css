@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Roash";
+  src: url("./assets//fonts/RoashePersonalUse-jEa4M.otf") format("woff");
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  background: url("./assets//images/back.png");
+  height: 100vh;
+  position: relative;
+  font-family: "GeneralSans-Medium", sans-serif;
+  overflow: hidden;
+  mix-blend-mode: overlay;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(84, 83, 83, 0.239);
+    z-index: -1;
+  }
+}
+
+.App {
+  font-size: 16px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Background Styles */
+.background {
+  position: absolute;
+  display: block;
+  width: 40rem;
+  height: 40rem;
+  z-index: -1;
+  opacity: 1;
+  background: linear-gradient(
+    132deg,
+    rgba(255, 116, 72, 0.5) 35%,
+    rgba(255, 72, 72, 0.5) 54%,
+    rgba(98, 72, 255, 0.5) 80%
+  );
+  border-radius: 50rem;
+  filter: blur(6.4rem);
+}
+
+.background-bottom-right {
+  top: auto;
+  left: auto;
+  right: -6rem;
+  bottom: -15rem;
+}
+
+.background-top-left {
+  top: -15rem;
+  left: -6rem;
+  right: auto;
+  bottom: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

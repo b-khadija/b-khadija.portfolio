@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap");
+
+.preloader {
+  font-family: JetBrains Mono, monospace;
+}
+
+.preloader .string {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  animation: move 4s infinite;
+}
+
+.preloader .greeting {
+  position: relative;
+  top: 0;
+  opacity: 1;
+}
+
+.preloader .string-wrapper {
+  overflow: hidden;
+  height: 2.6vmin;
+}
+
+.preloader .en {
+  color: #fa8231;
+}
+
+.preloader .fr {
+  color: #f9c80e;
+}
+
+.preloader .es {
+  color: #ea3546;
+}
+
+.preloader .de {
+  color: #662e9b;
+}
+
+.preloader .it {
+  color: #43bccd;
+}
+
+@keyframes move {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  45% {
+    transform: translateY(-4vmin);
+  }
+  50%,
+  70% {
+    transform: translateY(-7.3vmin);
+  }
+  75%,
+  95% {
+    transform: translateY(-10.9vmin);
+  }
+  100% {
+    transform: translateY(-14vmin);
+  }
+}
