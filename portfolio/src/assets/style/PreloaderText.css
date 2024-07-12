@@ -63,3 +63,36 @@
     transform: translateY(-14vmin);
   }
 }
+
+/* Mobile */
+@media screen and (max-width: 680px) {
+  .title-mobile-style {
+    font-size: 1.2rem;
+  }
+
+  .preloader .string-wrapper {
+    height: 5vmin;
+  }
+
+  @keyframes move {
+    0%,
+    20% {
+      transform: translateY(0);
+    }
+    25%,
+    45% {
+      transform: translateY(-6vmin);
+    }
+    50%,
+    70% {
+      transform: translateY(-12vmin);
+    }
+    75%,
+    95% {
+      transform: translateY(-18vmin);
+    }
+    100% {
+      transform: translateY(-24vmin);
+    }
+  }
+}
