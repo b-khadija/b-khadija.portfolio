@@ -9,9 +9,8 @@ const Preloader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 60000);
 
-    // }, 3000); /
     return () => clearTimeout(timer);
   }, []);
 
@@ -25,24 +24,27 @@ const Preloader = () => {
         autoplay
         className="w-auto	h-auto"
       />
-      <div className="preloader text-center flex items-center justify-center">
-        <h1 className="text-3xl">
+      <div className="preloader container text-center flex items-center justify-center">
+        <h1 className="sm:text-3xl title-mobile-style">
           System
-          <span style={{ color: "white" }}>
+          <span style={{ color: "purple" }}>
             .<span style={{ color: "#e06c75" }}>out</span>.
           </span>
-          <span style={{ color: "#61afef" }}>println</span>("
+          <span className="title-mobile-style" style={{ color: "#61afef" }}>
+            println
+          </span>
+          ("
         </h1>
         <div className="string-wrapper">
           <div className="string">
-            <p className="greeting en text-2xl">Hello World!</p>
-            <p className="greeting fr text-2xl">Bonjour!</p>
-            <p className="greeting es text-2xl">¡Hola Mundo!</p>
-            <p className="greeting it text-2xl">Ciao Mondo!</p>
-            <p className="greeting de text-2xl">Hallo Welt!</p>
+            <p className="greeting en sm:text-2xl">Hello World!</p>
+            <p className="greeting fr text-base sm:text-2xl">Bonjour!</p>
+            <p className="greeting es text-base sm:text-2xl">¡Hola Mundo!</p>
+            <p className="greeting it text-base sm:text-2xl">Ciao Mondo!</p>
+            <p className="greeting de text-base sm:text-2xl">Hallo Welt!</p>
           </div>
         </div>
-        <h1 className="closure text-3xl">");</h1>
+        <h1 className="closure text-3xl title-mobile-style">");</h1>
       </div>
     </div>
   );
