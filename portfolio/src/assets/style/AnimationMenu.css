@@ -41,7 +41,6 @@
   padding: 0.5em 0;
   content: attr(data-hover);
   white-space: nowrap;
-  transform: translateY(-150%);
 }
 
 .animation-menu li:hover a,
