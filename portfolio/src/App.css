@@ -13,10 +13,9 @@ body {
   font-size: 16px;
   margin: 0;
   background: url("./assets//images/back.png");
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   font-family: "GeneralSans-Medium", sans-serif;
-  overflow: hidden;
   z-index: -2;
 }
 
@@ -37,36 +36,38 @@ body::before {
   min-height: 100vh;
 }
 
-/* Background Styles */
 .background {
   position: absolute;
-  display: block;
-  width: 40rem;
-  height: 40rem;
   z-index: -1;
   opacity: 1;
+  border-radius: 50rem;
+  filter: blur(6.4rem);
+}
+
+.background-bottom-right {
+  bottom: -20vh;
+  right: -15vh;
+  width: 50vw;
+  height: 50vw;
   background: linear-gradient(
     132deg,
     rgba(255, 116, 72, 0.5) 35%,
     rgba(255, 72, 72, 0.5) 54%,
     rgba(98, 72, 255, 0.5) 80%
   );
-  border-radius: 50rem;
-  filter: blur(6.4rem);
-}
-
-.background-bottom-right {
-  top: auto;
-  left: auto;
-  right: -6rem;
-  bottom: -15rem;
 }
 
 .background-top-left {
-  top: -15rem;
-  left: -6rem;
-  right: auto;
-  bottom: auto;
+  top: -34vh;
+  left: -24vh;
+  width: 50vw;
+  height: 50vw;
+  background: linear-gradient(
+    132deg,
+    rgba(255, 116, 72, 0.5) 35%,
+    rgba(255, 72, 72, 0.5) 54%,
+    rgba(98, 72, 255, 0.5) 80%
+  );
 }
 
 .sr-only {
@@ -81,18 +82,44 @@ body::before {
 }
 
 @media (max-width: 768px) {
+  html {
+    overflow-y: auto;
+  }
+
   body {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch; 
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .project-container {
-    margin-top: 8rem;
+    margin: 12rem 0 0;
+    width: 90%;
   }
 
   .modal {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  body::before {
+    width: 100%;
+    height: max-content;
+    background-color: rgba(84, 83, 83, 0.239);
+    z-index: -1;
+  }
+
+  .background-bottom-right {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  .background-top-left {
+    width: 100vw;
+    height: 100vw;
+  }
+
+  footer {
+    position: relative;
   }
 }
 

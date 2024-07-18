@@ -5,6 +5,7 @@ import Logo from "../assets/images/Logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -15,6 +16,10 @@ const Header = () => {
     setIsOpen(false);
   }, [location]);
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   const NavItem = ({ to, text }) => {
     const isActive = location.pathname === to;
 
@@ -22,10 +27,10 @@ const Header = () => {
       <li role="none" className={isActive ? "current" : ""}>
         <Link
           to={to}
-          className="cursor-none link-menu"
+          className="link-menu"
           data-hover={text}
           aria-current={isActive ? "page" : undefined}
-          onClick={() => setIsOpen(false)}
+          onClick={closeMenu}
         >
           {text}
         </Link>

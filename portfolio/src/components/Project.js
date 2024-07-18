@@ -1,9 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import CustomCursor from "./CustomCursor";
-import "../App.css";
-import "../assets/style/CustomCursor.css";
 import DefaultImage from "../assets/images/DefaultImage.png";
 import StreamberryOne from "../assets/images/StreamberryOne.png";
 import StreamberryTwo from "../assets/images/StreamberryTwo.png";
@@ -14,14 +11,14 @@ import WeatherAppImage from "../assets/images/Weatherapp.jpeg";
 const projects = [
   {
     title: "RealTimeChat",
-    description: "A real-time chat application",
+    description: "Chat application",
     link: "",
     github: "https://github.com/b-khadija/RealTimeChat",
     image: null,
   },
   {
     title: "StreamBerry",
-    description: "Clone of Netflix using React & API",
+    description: "Clone of Netflix",
     link: "https://netflix-app-beryl-three.vercel.app/",
     github: "https://github.com/b-khadija/NetflixApp",
     image: StreamberryOne,
@@ -37,7 +34,7 @@ const projects = [
   },
   {
     title: "Weather App",
-    description: "A weather app that uses the OpenWeatherMap API.",
+    description: "A weather app",
     link: "https://weatherappchallenge.vercel.app/",
     github: "https://github.com/b-khadija/30DaysOfJavaScript",
     image: WeatherAppImage,
@@ -78,27 +75,26 @@ const Projects = () => {
   }, [selectedProject]);
 
   return (
-    <div className="container mx-auto py-8 flex flex-col items-center cursor-none project-container">
-      <CustomCursor />
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold tracking-widest mb-8 text-Black font-RobotoSlab">
+    <div className="container mx-auto py-8 flex flex-col items-center project-container">
+      <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl uppercase font-bold tracking-widest mb-16 text-Black font-RobotoSlab">
         Projets
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 cursor-none">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="modal bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg p-6 cursor-none mb-4 transition transform hover:scale-105"
+            className="modal bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg p-6 mb-4 transition transform hover:scale-105"
             onClick={(e) => openProjectModal(project, e)}
           >
             <img
               src={project.image || DefaultImage}
               alt={project.title}
-              className="w-full h-64 object-cover mb-4 cursor-none"
+              className="w-full h-64 object-cover mb-4"
             />
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-RichBlack cursor-none">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-RichBlack">
               {project.title}
             </h2>
-            <p className="mb-4 text-base sm:text-lg md:text-xl text-DarkCyan cursor-none">
+            <p className="mb-4 text-base sm:text-lg md:text-xl text-DarkCyan">
               {project.description}
             </p>
           </div>
@@ -106,11 +102,10 @@ const Projects = () => {
       </div>
 
       {selectedProject && (
-        <div className="cursor-none fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <CustomCursor />
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
           <div
             ref={modalRef}
-            className="bg-white w-full h-full rounded-lg p-8 md:p-20 max-h-screen overflow-y-auto relative shadow-lg cursor-none flex flex-col"
+            className="bg-white w-full h-full rounded-lg p-8 md:p-20 max-h-screen overflow-y-auto relative shadow-lg flex flex-col"
           >
             <button
               onClick={closeProjectModal}
@@ -129,7 +124,7 @@ const Projects = () => {
                     to={selectedProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-lg sm:text-xl cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
+                    className="font-semibold text-lg sm:text-xl pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
                   >
                     Voir le site
                   </Link>
@@ -142,24 +137,24 @@ const Projects = () => {
                     to={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-lg sm:text-xl cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
+                    className="font-semibold text-lg sm:text-xl pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
                   >
                     En savoir plus
                   </Link>
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-4 cursor-none">
+            <div className="flex flex-col gap-4">
               <img
                 src={selectedProject.image || DefaultImage}
                 alt={selectedProject.title}
-                className="w-full h-auto object-cover mb-4 cursor-none max-w-full"
+                className="w-full h-auto object-cover mb-4 max-w-full"
               />
               {selectedProject.extraImage && (
                 <img
                   src={selectedProject.extraImage}
                   alt={`${selectedProject.title} extra`}
-                  className="w-full h-auto object-cover mb-4 cursor-none max-w-full"
+                  className="w-full h-auto object-cover mb-4 max-w-full"
                 />
               )}
             </div>
