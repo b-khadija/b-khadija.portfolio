@@ -83,7 +83,9 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="modal bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg p-6 mb-4 transition transform hover:scale-105"
+            className={`modal bg-white bg-opacity-10 ${
+              window.innerWidth >= 640 ? "backdrop-blur-md" : ""
+            } shadow-md rounded-lg p-6 mb-4 transition transform hover:scale-105`}
             onClick={(e) => openProjectModal(project, e)}
           >
             <img
