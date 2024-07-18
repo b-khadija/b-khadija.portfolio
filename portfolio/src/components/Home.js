@@ -26,7 +26,7 @@ const Home = () => {
             <HiOutlineArrowRight className="transition-transform transform group-hover:rotate-45 duration-200 group-hover:text-RichBlack" />
             <Link
               to="./Project.js"
-              className="cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 group-hover:text-RichBlack group-hover:font-semibold"
+              className="pl-2 group-hover:underline group-hover:underline-offset-4 group-hover:text-RichBlack group-hover:font-semibold"
             >
               Voir mes projets
             </Link>
@@ -35,7 +35,7 @@ const Home = () => {
             <HiOutlineArrowRight className="transition-transform transform group-hover:rotate-45 duration-200 group-hover:text-RichBlack " />
             <Link
               to="./About.js"
-              className="cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 group-hover:text-RichBlack group-hover:font-semibold"
+              className="pl-2 group-hover:underline group-hover:underline-offset-4 group-hover:text-RichBlack group-hover:font-semibold"
             >
               En savoir plus
             </Link>

@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import CustomCursor from "./components/CustomCursor";
 import Preloader from "./components/Preloader";
 import Background from "./components/background";
 import Header from "./components/Header";
@@ -16,10 +15,9 @@ function App() {
     <Router>
       <Preloader />
       <Background />
-      <CustomCursor />
-      <div className="App">
+      <div className="App relative min-h-screen">
         <Header />
-        <main className="flex justify-center min-h-screen items-center mt-16 cursor-none">
+        <main className="flex justify-center min-h-screen items-center">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="Project.js" element={<Projects />} />
