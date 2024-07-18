@@ -25,6 +25,7 @@ const Header = () => {
           className="cursor-none link-menu"
           data-hover={text}
           aria-current={isActive ? "page" : undefined}
+          onClick={() => setIsOpen(false)}
         >
           {text}
         </Link>
