@@ -79,3 +79,23 @@ body::before {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .project-container {
+    margin-top: 8rem;
+  }
+
+  .modal {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+#mobile-menu {
+  overflow: auto;
+}

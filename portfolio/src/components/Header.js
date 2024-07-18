@@ -34,7 +34,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-10 text-Black">
+    <header className="fixed top-0 w-full z-10 text-Black header">
       <div className="container mx-auto flex justify-between items-center p-4">
         <img src={Logo} alt="Logo" width={80} height={80} />
         <nav

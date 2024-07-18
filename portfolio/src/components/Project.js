@@ -20,7 +20,7 @@ const projects = [
     image: null,
   },
   {
-    title: "NetflixApp - StreamBerry",
+    title: "StreamBerry",
     description: "Clone of Netflix using React & API",
     link: "https://netflix-app-beryl-three.vercel.app/",
     github: "https://github.com/b-khadija/NetflixApp",
@@ -78,16 +78,16 @@ const Projects = () => {
   }, [selectedProject]);
 
   return (
-    <div className="container mx-auto py-8 flex flex-col items-center cursor-none">
+    <div className="container mx-auto py-8 flex flex-col items-center cursor-none project-container">
       <CustomCursor />
-      <h1 className="text-3xl uppercase font-bold tracking-widest mb-8 text-Black font-RobotoSlab">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl uppercase font-bold tracking-widest mb-8 text-Black font-RobotoSlab">
         Projets
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 cursor-none">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg p-6 cursor-none mb-4 transition transform hover:scale-105"
+            className="modal bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg p-6 cursor-none mb-4 transition transform hover:scale-105"
             onClick={(e) => openProjectModal(project, e)}
           >
             <img
@@ -95,10 +95,10 @@ const Projects = () => {
               alt={project.title}
               className="w-full h-64 object-cover mb-4 cursor-none"
             />
-            <h2 className="text-2xl font-semibold mb-2 text-RichBlack cursor-none">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-RichBlack cursor-none">
               {project.title}
             </h2>
-            <p className="mb-4 text-lg text-DarkCyan cursor-none">
+            <p className="mb-4 text-base sm:text-lg md:text-xl text-DarkCyan cursor-none">
               {project.description}
             </p>
           </div>
@@ -118,7 +118,7 @@ const Projects = () => {
             >
               &times;
             </button>
-            <h2 className="text-3xl font-bold mb-4 font-RobotoSlab text-RichBlack">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-RobotoSlab text-RichBlack">
               {selectedProject.title}
             </h2>
             <div className="flex justify-between pt-14 mb-6">
@@ -129,7 +129,7 @@ const Projects = () => {
                     to={selectedProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-lg cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
+                    className="font-semibold text-lg sm:text-xl cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
                   >
                     Voir le site
                   </Link>
@@ -142,7 +142,7 @@ const Projects = () => {
                     to={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-lg cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
+                    className="font-semibold text-lg sm:text-xl cursor-none pl-2 group-hover:underline group-hover:underline-offset-4 text-DarkCyan group-hover:text-Fulvous group-hover:font-semibold"
                   >
                     En savoir plus
                   </Link>
@@ -163,7 +163,9 @@ const Projects = () => {
                 />
               )}
             </div>
-            <p className="text-gray-700 mb-4">{selectedProject.description}</p>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 mb-4">
+              {selectedProject.description}
+            </p>
           </div>
         </div>
       )}
