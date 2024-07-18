@@ -17,18 +17,18 @@ body {
   position: relative;
   font-family: "GeneralSans-Medium", sans-serif;
   overflow: hidden;
-  mix-blend-mode: overlay;
+  z-index: -2;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(84, 83, 83, 0.239);
-    z-index: -1;
-  }
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(84, 83, 83, 0.239);
+  z-index: -1;
 }
 
 .App {

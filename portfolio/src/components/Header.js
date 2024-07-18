@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../assets/style/AnimationMenu.css";
 import Logo from "../assets/images/Logo.png";
@@ -10,6 +10,10 @@ const Header = () => {
   };
 
   const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   const NavItem = ({ to, text }) => {
     const isActive = location.pathname === to;
