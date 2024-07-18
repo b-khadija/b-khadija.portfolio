@@ -1,98 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap");
 
 .preloader {
-  font-family: JetBrains Mono, monospace;
-}
-
-.preloader .string {
+  font-family: "JetBrains Mono", monospace;
+  position: fixed;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  animation: move 4s infinite;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-.preloader .greeting {
+.text-size {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.5em;
+  white-space: nowrap;
+}
+
+.text-out {
+  font-size: 1.7rem;
+}
+
+.text-wrapper {
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  top: 0;
-  opacity: 1;
+  text-align: center;
 }
 
-.preloader .string-wrapper {
+.string-wrapper {
+  position: relative;
+  height: 2em;
   overflow: hidden;
-  height: 2.6vmin;
 }
 
-.preloader .en {
-  color: #fa8231;
-}
-
-.preloader .fr {
-  color: #f9c80e;
-}
-
-.preloader .es {
-  color: #ea3546;
-}
-
-.preloader .de {
-  color: #662e9b;
-}
-
-.preloader .it {
-  color: #43bccd;
-}
-
-@keyframes move {
+@keyframes move-desktop {
   0%,
   20% {
     transform: translateY(0);
   }
   25%,
   45% {
-    transform: translateY(-4vmin);
+    transform: translateY(-5vh);
   }
   50%,
   70% {
-    transform: translateY(-7.3vmin);
+    transform: translateY(-9.7vh);
   }
   75%,
   95% {
-    transform: translateY(-10.9vmin);
+    transform: translateY(-13vh);
   }
   100% {
-    transform: translateY(-14vmin);
+    transform: translateY(-17.2vh);
   }
 }
 
-/* Mobile */
+@keyframes move-mobile {
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  45% {
+    transform: translateY(-2vh);
+  }
+  50%,
+  70% {
+    transform: translateY(-3.6vh);
+  }
+  75%,
+  95% {
+    transform: translateY(-5.5vh);
+  }
+  100% {
+    transform: translateY(-7.2vh);
+  }
+}
+
 @media screen and (max-width: 680px) {
-  .title-mobile-style {
-    font-size: 1.2rem;
+  .string-wrapper {
+    height: 1em;
   }
 
-  .preloader .string-wrapper {
-    height: 5vmin;
+  .text-out {
+    font-size: 1rem;
   }
 
-  @keyframes move {
-    0%,
-    20% {
-      transform: translateY(0);
-    }
-    25%,
-    45% {
-      transform: translateY(-6vmin);
-    }
-    50%,
-    70% {
-      transform: translateY(-12vmin);
-    }
-    75%,
-    95% {
-      transform: translateY(-18vmin);
-    }
-    100% {
-      transform: translateY(-24vmin);
-    }
+  .text-size {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .string {
+    animation: move-mobile 10s infinite;
+  }
+}
+
+@media screen and (min-width: 681px) {
+  .string-wrapper {
+    height: 2em;
+  }
+
+  .text-out {
+    font-size: 1.9rem;
+  }
+
+  .string {
+    animation: move-desktop 10s infinite;
   }
 }
