@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../assets/style/AnimationMenu.css";
 import Logo from "../assets/images/Logo.png";
@@ -11,6 +11,10 @@ const Header = () => {
 
   const location = useLocation();
 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
   const NavItem = ({ to, text }) => {
     const isActive = location.pathname === to;
 
@@ -21,6 +25,7 @@ const Header = () => {
           className="cursor-none link-menu"
           data-hover={text}
           aria-current={isActive ? "page" : undefined}
+          onClick={() => setIsOpen(false)}
         >
           {text}
         </Link>
@@ -29,7 +34,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full z-10 text-Black">
+    <header className="fixed top-0 w-full z-10 text-Black header">
       <div className="container mx-auto flex justify-between items-center p-4">
         <img src={Logo} alt="Logo" width={80} height={80} />
         <nav
